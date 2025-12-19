@@ -1,0 +1,9 @@
+{
+	"name": "azuredatafactorynaveen01",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f4e355e4-33ba-4a0a-b2fd-fe000e2fb4bb",
+		"tenantId": "56134d8c-b51a-462b-becf-8c15cb90e215"
+	}
+}
