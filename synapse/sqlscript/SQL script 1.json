@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "-- -- Switch to the correct database context\n-- USE serverlessdbone;\n-- GO\n\n-- -- 1. Create a user that corresponds to the Azure AD Managed Identity 'synapsegrp'\n-- -- Note: This should have already run successfully in the previous attempt.\n-- CREATE USER [synapsegrp] FROM EXTERNAL PROVIDER;\n-- GO\n\n-- -- 2. Grant necessary permissions for data access using ALTER ROLE (The correct way for Azure SQL DB)\n-- ALTER ROLE db_datareader ADD MEMBER [synapsegrp];\n-- ALTER ROLE db_datawriter ADD MEMBER [synapsegrp];\n-- GO\n-- -- Assign data reader role to the existing user\n-- ALTER ROLE db_datareader ADD MEMBER [synapsegrp];\n-- GO\n\n-- -- Assign data writer role to the existing user\n-- ALTER ROLE db_datawriter ADD MEMBER [synapsegrp];\n-- GO\nSELECT TOP 1 *\nFROM OPENROWSET(\n    BULK 'https://forsynapseaccount.dfs.core.windows.net/gold/Sales/CountryRegionCurrency/',\n    FORMAT = 'DELTA'\n) AS [result];\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://forsynapseaccount.dfs.core.windows.net/gold/Sales/CountryRegionCurrency/',\n        FORMAT = 'DELTA'\n    ) AS [result];\n\n\n\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "serverlessdbone",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

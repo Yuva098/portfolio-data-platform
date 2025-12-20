@@ -1,0 +1,17 @@
+{
+	"name": "project-serverless",
+	"properties": {
+		"content": {
+			"query": "CREATE OR ALTER PROC CreateSQLServerlessView_gold\n    @ViewName sysname\nAS\nBEGIN\n    DECLARE @statement NVARCHAR(MAX);\n\n    SET @statement = N'\n        CREATE OR ALTER VIEW ' + QUOTENAME(@ViewName) + N' AS\n        SELECT *\n        FROM OPENROWSET(\n            BULK ''https://forsynapseaccount.dfs.core.windows.net/gold/Sales/' + @ViewName + N'/'',\n            FORMAT = ''DELTA''\n        ) AS result;\n    ';\n\n    EXEC sys.sp_executesql @statement;\nEND;\nGO\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "serverlessdbone",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
