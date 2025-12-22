@@ -1,0 +1,132 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "azuredatafactorynaveen01"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage4_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"FileServer1_password": {
+			"value": ""
+		},
+		"FileServer2_password": {
+			"value": ""
+		},
+		"FileServeronprem_password": {
+			"value": ""
+		},
+		"SqlServeronprem_password": {
+			"value": ""
+		},
+		"adftodatabrickslinkedservice_accessToken": {
+			"value": ""
+		},
+		"ls_getmetadata_accountKey": {
+			"value": ""
+		},
+		"ls_sink_copydata_json_accountKey": {
+			"value": ""
+		},
+		"ls_sink_event_trigger_accountKey": {
+			"value": ""
+		},
+		"ls_source_copydata_checkfile_accountKey": {
+			"value": ""
+		},
+		"ls_source_event_trigger_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://storageaccountadls01.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://storageaccountadls01.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://storageaccountadls01.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage4_properties_typeProperties_url": {
+			"value": "https://storageaccountadls01.dfs.core.windows.net/"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_server": {
+			"value": "synapsegrp-ondemand.sql.azuresynapse.net"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_database": {
+			"value": "serverlessdbone"
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"value": "\\\\DESKTOP-15PP6OC\\azureshir"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"value": "asus"
+		},
+		"FileServer2_properties_typeProperties_host": {
+			"value": "D:\\azureshir"
+		},
+		"FileServer2_properties_typeProperties_userId": {
+			"value": "desktop-15pp6oc\\asus"
+		},
+		"FileServeronprem_properties_typeProperties_host": {
+			"value": "\\\\DESKTOP-15PP6OC\\onprem"
+		},
+		"FileServeronprem_properties_typeProperties_userId": {
+			"value": "DESKTOP-15PP6OC\\Asus"
+		},
+		"SqlServeronprem_properties_typeProperties_server": {
+			"value": "DESKTOP-15PP6OC\\SQLEXPRESS"
+		},
+		"SqlServeronprem_properties_typeProperties_database": {
+			"value": "AdventureWorks2025"
+		},
+		"SqlServeronprem_properties_typeProperties_userName": {
+			"value": "onprem"
+		},
+		"ls_getmetadata_properties_typeProperties_url": {
+			"value": "https://storageaccountadls01.dfs.core.windows.net/"
+		},
+		"ls_sink_copydata_json_properties_typeProperties_url": {
+			"value": "https://storageaccountadls01.dfs.core.windows.net/"
+		},
+		"ls_sink_event_trigger_properties_typeProperties_url": {
+			"value": "https://storageaccountadls01.dfs.core.windows.net/"
+		},
+		"ls_source_copydata_checkfile_properties_typeProperties_url": {
+			"value": "https://storageaccountadls01.dfs.core.windows.net/"
+		},
+		"ls_source_event_trigger_properties_typeProperties_url": {
+			"value": "https://storageaccountadls01.dfs.core.windows.net/"
+		},
+		"event based_properties_typeProperties_scope": {
+			"value": "/subscriptions/af6b293d-09c5-40b4-984b-80c44f62911d/resourceGroups/devrg/providers/Microsoft.Storage/storageAccounts/storageaccountadls01"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"value": "/subscriptions/af6b293d-09c5-40b4-984b-80c44f62911d/resourceGroups/devrg/providers/Microsoft.Storage/storageAccounts/storageaccountadls01"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
